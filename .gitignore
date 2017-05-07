@@ -1,3 +1,4 @@
 node_modules/
 public/bower_components/
-public/config/config.js
+public/build/
+config/config/config.js
