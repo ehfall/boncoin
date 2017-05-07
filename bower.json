@@ -1,0 +1,29 @@
+{
+  "name": "boncoin",
+  "description": "",
+  "main": "",
+  "authors": [
+    "idyjob <you@example.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "angular": "^1.6.4",
+    "angular-loading-bar": "^0.9.0",
+    "angular-animate": "^1.6.4",
+    "angular-sanitize": "^1.6.4",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.6.4"
+  }
+}

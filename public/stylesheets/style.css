@@ -1,0 +1,16 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+body>.navbar {
+    -webkit-transition: background-color .3s ease-in;
+    transition: background-color .3s ease-in;
+    background: cadetblue;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #ffffff;
+}
