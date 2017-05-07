@@ -16,9 +16,7 @@ angular.module('usersDirective',[])
       controller: function($scope){
 
          
-        
-        console.log($scope.users);
-        console.log(typeof($scope.users));
+      
         
 
 
