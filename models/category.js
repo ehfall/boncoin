@@ -5,7 +5,7 @@ var Schema = mongoose.Schema;
 
 var CategorySchema= new Schema({
 
-  name:{type:String},
+  name:{type:String,unique: true},
   description : {type:String},
   author:{type: Schema.ObjectId, ref: 'member'},
   created_at: {type:Date, default: Date.now},

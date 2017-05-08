@@ -1,3 +1,7 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -6,7 +10,7 @@ body {
 a {
   color: #00B7FF;
 }
-body>.navbar {
+.navbar-default {
     -webkit-transition: background-color .3s ease-in;
     transition: background-color .3s ease-in;
     background: cadetblue;
@@ -14,3 +18,20 @@ body>.navbar {
 .navbar-default .navbar-nav > li > a {
     color: #ffffff;
 }
+
+ 
+
+ .content {display:none;}
+.preload {
+    width:100%;
+    height: 100%;
+    margin: auto;
+    /*position: absolute;*/
+
+
+  }
+  .loadingImage{
+    margin-left:50%;
+    height: 60px;
+    width: 60px;
+  }

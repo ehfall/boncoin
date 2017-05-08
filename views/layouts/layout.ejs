@@ -1,17 +1,28 @@
 <!DOCTYPE html>
-<html ng-app="mainApp">
+<html ng-app="mainApp" i18n-locale="<%= defaultLocalelanguage %>">
 	<head>
 		 
 
 		 <%-partial('./partials/_head')%>
 	</head>
-	<body>
-		<%-partial('./partials/_nav')%>
-		<div class="container">
-				
-				        <%- body -%>
-		</div>
+	<body  >
+	<!-- <div class="preload col-sm-6 col-sm-offset-3  col-xs-6 col-xs-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 well "><img src="/images/loading.png"  class="img-responsive"  ></div> -->
+	<div class="preload col-sm-6 col-sm-offset-3  col-xs-6 col-xs-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 well "> <img src="/images/loading.png"  class=" preloadimg-responsive loadingImage"  > </div>
 
-		<%-partial('./partials/_footer')%>
+  
+
+
+		<div class="content">
+			
+			 
+				<%-partial('./partials/_nav')%>
+				<div class="container">
+						
+						        <%- body -%>
+				</div>
+
+				<%-partial('./partials/_footer')%>
+				<toaster-container></toaster-container>
+		</div>
 	</body>
 </html>
