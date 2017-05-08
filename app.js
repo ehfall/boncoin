@@ -32,6 +32,7 @@ var staticAsset = require('static-asset');
 var async = require('async');
 var index = require('./routes/index');
 var users = require('./routes/users');
+var category = require('./routes/category');
 global.currentEnv=app.get('env');
 
 app.use(compression());
@@ -76,7 +77,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(session({
   name: 'JSESSION',
   secret:'hoochiecoochieman',
-   saveUninitialized:true,
+  saveUninitialized:true,
   resave:true,
   store:new MemoryStore({expires:10 * 60 * 12,checkperiod:10 * 60})
 })
@@ -133,7 +134,7 @@ app.use(function(req,res,next){
   {
     var locale = req.params.locale;
 
-  res.sendfile( "locales/" + locale + ".json" );
+  res.sendFile( __dirname+"/locales/" + locale + ".json" );
 });
 app.get('/i18n/:locale/:phrase', function( req, res ) {
 
@@ -147,6 +148,16 @@ app.get('/i18n/:locale/:phrase', function( req, res ) {
 });
 
 //end i18n config
+
+//change language
+app.get('/language/:lang',function(req,res,next){
+  var locale = req.params.lang;
+  global.defaultLocalelanguage  = locale;
+  res.redirect('back');
+
+});
+// end of change locale
+//end change language
 // express-validator conf
 app.use(expressValidator({
   errorFormatter: function(param, msg, value) {
@@ -194,6 +205,7 @@ app.use(function (req,res,next) {
 // require('./routes/routes.js')(app, passport,i18n);
 app.use('/',index);
 app.use('/users',users);
+app.use('/api/categories',category);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
