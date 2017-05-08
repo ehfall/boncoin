@@ -38,8 +38,8 @@ function findByUsernameAndPassword(username,password){
 	var deffered = Q.defer();
 
 	User.findOne({$or : [{'local.email' : username }, {'local.username' : username }]},function(user,error){
-		if(error){deffered.reject(error.name +" : "+error.message)};
-		if(user){deffered.resolve(user)};
+		if(error){deffered.reject(error.name +" : "+error.message);}
+		if(user){deffered.resolve(user);}
 	});
 	return deffered.promise;
 

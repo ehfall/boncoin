@@ -1,4 +1,7 @@
 node_modules/
+npm-debug.log
 public/bower_components/
+public/images/loading.png
 public/build/
 config/config/config.js
+uploads/

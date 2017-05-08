@@ -7,6 +7,11 @@ var gravatar = require('gravatar');
 
 
 var memberSchema = new Schema({
+
+  roles: {
+    type: String, 
+    enum: ['user', 'manager.', 'admin'],default:'user'
+        },
 	 local            : {
         email        : String,
         username     : String,
